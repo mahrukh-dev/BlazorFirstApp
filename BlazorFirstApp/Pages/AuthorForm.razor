@@ -1,5 +1,5 @@
 ﻿@page "/authorform"
-
+@using BlazorFirstApp.Data
 
 <PageTitle>Author Form</PageTitle>
 
@@ -8,19 +8,14 @@
 <div class="col-12">
     <h3>Enter Author Information</h3>
     <br />
-    <EditForm>
-        <input type="text" />
+    <EditForm Model="@author">
+        <div class="col-12 row">
+            <label class="col-2 font-weight-bold">First Name:</label>
+            <InputText class="form-control col-3" @bind-Value="author.FirstName" placeholder="first name" />
+        </div>
     </EditForm>
 </div>
 
 @code {
-
-    public Author author { get; set; }
-
-    protected override void OnInitialized()
-    {
-        author = new Author();
-        base.OnInitialized();
-    }
-
+    public Author author = new Author();
 }

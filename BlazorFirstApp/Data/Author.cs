@@ -12,20 +12,21 @@ namespace BlazorFirstApp.Data
         public string EmailAddress { get; set; }
         public int Salary { get; set; }
         public string Phone { get; set; }
+
         public Author()
         {
 
         }
-        public Author(int authorID, string firstName, string lastName, string emailAddress, int salary,
-                    string phoneNumber, string city)
+
+        public Author(int authorID, string firstName, string lastName, string city, string emailAddress, int salary, string phoneNumber)
         {
             AuthorID = authorID;
             FirstName = firstName;
             LastName = lastName;
-            Salary = salary;
-            EmailAddress = emailAddress;
-            Phone = phoneNumber;
             City = city;
+            EmailAddress = emailAddress;
+            Salary = salary;
+            Phone = phoneNumber;
         }
 
         public void clear()
