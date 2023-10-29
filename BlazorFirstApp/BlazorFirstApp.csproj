@@ -6,4 +6,20 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="Pages\Authors.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\Authors.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\Authors.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\Authors.razor" />
+  </ItemGroup>
+
 </Project>
