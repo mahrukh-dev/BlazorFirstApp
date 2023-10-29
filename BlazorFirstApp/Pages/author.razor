@@ -1,12 +1,22 @@
 ﻿@page "/author"
+@inject NavigationManager NavigationManager
 
 <PageTitle>AUthors</PageTitle>
 
 <h1>Author</h1>
 <hr />
 
-<a href="/author/authordetail">J.K.Rowling</a>
+<a href="/author/authordetail/11">J.K.Rowling</a>
+
+<br />
+
+<button class="btn btn-primary" @onclick="Navigate">J.K.Rowling</button>
 
 @code {
+
+    private void Navigate()
+    {
+        NavigationManager.NavigateTo("/author/authordetail/22");
+    }
     
 }
