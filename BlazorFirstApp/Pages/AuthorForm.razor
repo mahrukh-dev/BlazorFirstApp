@@ -1,0 +1,26 @@
+﻿@page "/authorform"
+
+
+<PageTitle>Author Form</PageTitle>
+
+<h3>AuthorForm</h3>
+
+<div class="col-12">
+    <h3>Enter Author Information</h3>
+    <br />
+    <EditForm>
+        <input type="text" />
+    </EditForm>
+</div>
+
+@code {
+
+    public Author author { get; set; }
+
+    protected override void OnInitialized()
+    {
+        author = new Author();
+        base.OnInitialized();
+    }
+
+}
